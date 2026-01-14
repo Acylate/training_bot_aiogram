@@ -3,10 +3,11 @@ from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 from create_bot import admins
 
 
-def main_Kb(user_tg_id: int):
+def main_kb(user_tg_id: int):
     kb_list = [
         [KeyboardButton(text="О нас!"), KeyboardButton(text="Профиль")],
-        [KeyboardButton(text="Заполнит анкету"), KeyboardButton(text="Каталог")]             
+        [KeyboardButton(text="Заполнит анкету"), KeyboardButton(text="Каталог")],
+        [KeyboardButton(text="Инлайн")]
     ]
     if user_tg_id in admins:
         kb_list.append([KeyboardButton(text="Панель админа")])
